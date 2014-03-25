@@ -3,3 +3,11 @@ title: Mediapathic.org
 ---
 
 <h1>Mediapathic.org</h1>
+
+<% get_blog_pages.each do |page| %>
+    <%= link_to page.data.title, page.url %>
+    <p>
+      <%= page.data.summary %>
+    </p>
+    <br>
+<% end %>
